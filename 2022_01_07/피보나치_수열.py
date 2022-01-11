@@ -1,7 +1,5 @@
 #백준 1003 피보나치 수열(dp)
 
-from typing import Counter
-
 
 call_zero = [1,0,1]
 call_one = [0,1,1]

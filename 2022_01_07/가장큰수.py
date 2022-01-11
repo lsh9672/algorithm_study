@@ -8,11 +8,10 @@ def solution(numbers):
     
     for i in numbers:
         temp_string.append(str(i))
+
     temp = sorted(temp_string,key = lambda x:x*3,reverse = True)
 
     answer = int("".join(temp))
-
-    
     
     return str(answer)
 
@@ -24,3 +23,4 @@ if __name__ == "__main__":
 
     numbers = [3,30,34,5,9]
     assert solution(numbers) == "9534330"
+    
