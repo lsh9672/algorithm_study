@@ -41,10 +41,6 @@ if __name__ == "__main__":
     #정렬
     sorted_list = bubble_sort.sort(random_list)
     print(sorted_list)
-
-    for i in range(10,-1,-1):
-        print(i)
-    
             
         
 
