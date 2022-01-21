@@ -7,13 +7,14 @@ def merge_split(data_list:list) -> list:
         return data_list
     
     medium = len(data_list) // 2
-    left_list = merge_split(data_list[:medium])
+    left_list = merge_split(data_list[:medium]) 
     right_list = merge_split(data_list[medium:])
 
     return merge(left_list,right_list)
 
 
 def merge(left_list:list,right_list:list) -> list:
+
     temp_merge_list = list()
     left_point,right_point = 0,0
 
@@ -27,12 +28,12 @@ def merge(left_list:list,right_list:list) -> list:
             temp_merge_list.append(left_list[left_point])
             left_point += 1
 
-    #case2 - left 데이터가 없을경우
+    #case2 - right 데이터가 없을경우
     while len(left_list) > left_point:
         temp_merge_list.append(left_list[left_point])
         left_point += 1
 
-    #case3 - right - 데이터가 없을 경우
+    #case3 - left - 데이터가 없을 경우
     while len(right_list) > right_point:
         temp_merge_list.append(right_list[right_point])
         right_point += 1
