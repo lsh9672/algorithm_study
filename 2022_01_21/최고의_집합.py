@@ -37,6 +37,8 @@ def solution(n, s):
 
     return list(answer)
 '''
+
+
 #각 원소들의 차이가 크지 않아야 곱이 최대가 된다는 아이디어를 이용(구글링 참고)
 def solution(n, s):
 
@@ -54,10 +56,10 @@ def solution(n, s):
     #목표치인 s보다 부족한 값 - 딱떨어지거나 부족함(소수점부분을 버리기 때문에)
     leak_value = s - sum(temp_list)
 
-    #부족한 수만큼 반복하면서 인덱스에 1씩더하므로써 균등하게 만듦
+    #부족한 수만큼 반복하면서 인덱스에 1씩더하므로써 균등하게 만듦 - 오름차순으로 리터나라 했기 때문에 뒤에서 부터 더함
     for i in range(leak_value):
         temp_list[len(temp_list)-1 - i] += 1
-        
+
     return temp_list
     
 
