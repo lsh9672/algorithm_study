@@ -3,7 +3,7 @@ from collections import deque
 
 
 #BFS
-def bfs(start_node,graph):
+def dfs(start_node,graph):
     #방문한 노드 저장
     visited = dict()
 
@@ -44,7 +44,7 @@ def solution(n, computers):
     
     while check_list:
         current_node = list(check_list)[0]
-        check_list = check_list - bfs(current_node,graph)
+        check_list = check_list - dfs(current_node,graph)
         answer += 1
 
         

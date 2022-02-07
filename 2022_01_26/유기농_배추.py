@@ -34,7 +34,6 @@ def bfs(start_node:list, graph:list,m:int,n:int) -> list:
             if current_node[0] + 1 <= n-1:
                 if graph[current_node[0] + 1][current_node[1]] == 1:
                     temp = (current_node[0]+dy[1],current_node[1])
-                    print(temp)
                     need_visited.append(temp)
 
             #좌

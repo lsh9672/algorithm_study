@@ -87,6 +87,7 @@ def solution(begin, target, words):
 #탐색이 필요한 노드에 주어진 `begin` 단어와 count=0 이 들어갈것이다
 #word를 반복문으로 돌면서 자식노드로서 조건에 부합하는 값이 있으면 방문표시를 True로 하고 다음 탐색을 위해 need_visited에 넣는다.
 #need_visted에서 하나씩 꺼내면서 탐색하다가, target을 만나면 해당 노드에 저장된 count값을 출력한다.
+#훨씬 빠르다 - 노드가 늘어날수록 더 빠를것이다.
 
 
 def bfs2(start_node,target,graph) -> int:
@@ -123,7 +124,6 @@ def solution2(begin, target, words):
         return 0 
 
     result = bfs2(begin,target,words)
-    print(result)
 
     return result
 

@@ -6,35 +6,7 @@ from itertools import permutations as pm
 def solution(n, k):
     answer = []
     
-    human_list = [i for i in range(n)]
-    
-    temp = list(pm(human_list,n))[k-1]
-
-    for i in temp:
-        answer.append(int(i))
-
-    
-    return answer
-
-
-"""속도를 올리기 위한 풀이"""
-#팩토리얼 계산 함수
-def fac(num:int) -> int:
-
-    total = 1
-    for i in range(1,num+1):
-        total *= i
-
-    return total
-
-
-def solution2(n:int,k:int) -> list:
-    answer = []
-
-    #사람 나열
     human_list = [i for i in range(1,n+1)]
-        
-    human_list = [i for i in range(n)]
     
     temp = list(pm(human_list,n))[k-1]
 
@@ -83,7 +55,7 @@ def solution2(n:int,k:int) -> list:
 
     return answer
 
-"""재귀로 풀어본 풀이"""
+"""재귀로 풀어본 풀이 => 효율성에서 시간초과가 난다"""
 def calculate(answer:list,human_list:list,k:int,n:int) -> list:
 
     if n == 0:

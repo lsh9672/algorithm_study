@@ -46,7 +46,6 @@ def bfs(start_node,graph):
 
     return visited
 
-        
 #탐색 결과
 result = bfs(1,graph)
 

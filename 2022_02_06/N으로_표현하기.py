@@ -32,14 +32,10 @@ def solution(N, number):
             for operator1 in operator_set[j]:
                 for operator2 in operator_set[i-j-1]:
                     operator_set[i].add(operator1 + operator2)
-                    print(f"+ op1:{operator1}, op2:{operator2}")
                     operator_set[i].add(operator1 - operator2)
-                    print(f"- op1:{operator1}, op2:{operator2}")
                     operator_set[i].add(operator1 * operator2)
-                    print(f"* op1:{operator1}, op2:{operator2}")
                     if operator2 != 0:
                         operator_set[i].add(operator1 // operator2)
-                        print(f" / op1:{operator1}, op2:{operator2}")
         
         if number in operator_set[i]:
             return i+1

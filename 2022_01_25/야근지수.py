@@ -19,7 +19,6 @@ def solution(n, works):
     for i in works:
         answer += i*i
 
-
     return answer
 
 

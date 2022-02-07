@@ -25,8 +25,8 @@ def bfs(start_node,graph):
     while need_visited:
         current_node,current_count = need_visited.pop()
 
-        #가중치가 2보다 크면 2-친구가 아님
-        if current_count > 2:
+        #가중치가 2보다 크면 c친구가 아님
+        if current_count >= 2:
             continue
         
         #연결된 노드의 갯수가 같기 때문에 반복문을 돌려가면서 처리함

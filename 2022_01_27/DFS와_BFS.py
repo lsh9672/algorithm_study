@@ -58,24 +58,9 @@ for _ in range(m):
 
     graph[second_node].append(first_node)
 
-
-# result_dfs = dfs(v,graph)
-
-# result_bfs = bfs(v,graph)
-
-
 print(' '.join(map(str,dfs(v,graph))))
 print(' '.join(map(str,bfs(v,graph))))
 
-# for j in result_dfs:
-
-#     print(j,end=" ")
-
-# print('')
-
-# for i in result_bfs:
-
-#     print(i,end=" ")
 
 
 

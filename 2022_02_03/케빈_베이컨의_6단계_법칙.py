@@ -50,7 +50,6 @@ min = [n+1,(6*n)+1]
 for i in range(1,n+1):
     
     result = bfs(i,graph)
-    print(f"resutl : {result}")
 
     #-1을 제외한 값을 더함
     total = 0
@@ -58,8 +57,6 @@ for i in range(1,n+1):
         if j != -1:
             total += j
 
-    
-    print(f"number :{i}, total: {total}")
     
     if min[1] > total:
 

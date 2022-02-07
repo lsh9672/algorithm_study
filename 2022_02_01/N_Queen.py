@@ -18,6 +18,10 @@ def check(queen:list,row:int)->bool:
             return False
     return True
 
+    
+
+
+
 #재귀함수 - 각 경우에 대해서 탐색하는 함수
 def bfs(queen:list,row:int) -> int:
     length = len(queen)
@@ -27,7 +31,7 @@ def bfs(queen:list,row:int) -> int:
     #계속탐색하다 탐색하는 row가 좌표평면의 끝에 도달하면 종료
     if length == row:
         return 1
-
+        
     #좌표평면의 끝이 아니면 row+1 해서 자기 자신호출에서 탐색을 계속 함
     for i in range(length):
         #퀸을 주어진 row에서 컬럼을 바꿔가면서 넣어봄
@@ -41,7 +45,7 @@ def bfs(queen:list,row:int) -> int:
 
 
 def solution(n:int)->int:
-    #퀸의 위치를 담을 리스트 - 같은 row에는 하나의 퀸밖에 올수 없어서 인덱스를 column으로 함, 
+    #퀸의 위치를 담을 리스트 - 같은 row에는 하나의 퀸밖에 올수 없어서 인덱스를 row으로 함, 
     #예를들어 [1,2,3,4]이면 (0,1),(1,2),(2,3),(3,4) => 같은 row에는 어차피 퀸이 하나 밖에 오지못함
     queen_location = [0]*n
 
@@ -54,3 +58,6 @@ def solution(n:int)->int:
 if __name__=="__main__":
     n=4
     assert solution(n) == 2
+
+
+    

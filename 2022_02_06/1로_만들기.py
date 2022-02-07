@@ -4,7 +4,6 @@
 import sys
 
 
-
 n = int(sys.stdin.readline())
 
 #여기에는 계산한 횟수를 더하는것이다
