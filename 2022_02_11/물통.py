@@ -37,7 +37,6 @@ def check(node:tuple) -> bool:
     else:
         return False
 
-
 #bfs 함수 정의 - 노드를 딕셔너리에 키로 저장해야되기 때문에 튜플로 한다.,water_count를 반환한다.
 def bfs(start_node:tuple,water_total:int) -> set:
 
@@ -53,8 +52,6 @@ def bfs(start_node:tuple,water_total:int) -> set:
 
     
     while need_visited:
-        print(need_visited)
-
 
         #방문해야될 노드를 꺼냄
         current_a,current_b = need_visited.popleft()
@@ -70,7 +67,6 @@ def bfs(start_node:tuple,water_total:int) -> set:
         
         #2. A->B일때
         #물의 양을 체크함 -> 전부 부을수 있는지 없는지
-        # b는 입력받은 물통크기 
 
         #옮길수 있는 물의양
         move_amount_of_water = min(current_a,b-current_b)

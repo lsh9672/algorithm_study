@@ -9,7 +9,10 @@
 #6 방문노드 확인을 dict로 만들어서 value에 거친 단계의 최소값을 저장한다
 #7 최종적으로 방문확인 dict를 반환하고 target노드의 값을 출력한다.
 
+
+from calendar import c
 from collections import deque
+from this import d
 
 
 #단어차이가 1인 것을 판별하는 함수
@@ -23,8 +26,8 @@ def check(node,word:str)-> bool:
         if count >=2:
             return False
     if count == 1:
-
         return True
+        
     else:
         return False
 
@@ -98,6 +101,7 @@ def bfs2(start_node,target,graph) -> int:
     need_visited = deque(list())
     need_visited.append([start_node,0])
 
+
     while need_visited:
         current_node,current_count = need_visited.popleft()
 
@@ -106,14 +110,13 @@ def bfs2(start_node,target,graph) -> int:
             count = current_count
             break
 
-        
         for i in range(len(graph)):
+
             if check(current_node,graph[i]) == True:
 
                 if visited[i] == False:
                     visited[i] = True
                     need_visited.append([graph[i],current_count+1])
-
 
     return count 
 

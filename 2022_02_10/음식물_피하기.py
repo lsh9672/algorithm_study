@@ -58,8 +58,6 @@ def bfs(start_node:list) -> int:
                 graph[next_x][next_y] = 0
                 need_visited.append([next_x,next_y])
 
-        
-
     return count
 
 #음식물의 최대사이즈
