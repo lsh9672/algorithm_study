@@ -59,12 +59,13 @@ def solution(n, results):
 
 
 if __name__ == "__main__":
+    
     n = 5
     results = [[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]]
     # assert solution(n,results) == 2
 
     n = 5
     results = [[1, 2], [4, 5], [3, 4], [2, 3]]
-    
+
     print(solution(n,results))
     # assert solution(n,results) == 5

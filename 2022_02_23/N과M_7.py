@@ -29,5 +29,4 @@ def dfs(result:list,count:int)->None:
         result[count]=i
         dfs(result,count+1)
 
-            
 dfs(result,count)

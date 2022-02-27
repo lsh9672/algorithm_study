@@ -62,7 +62,6 @@ def bfs():
                     visited[(next_x,next_y)] = 1
                     count+=1
         
-    
     return count
 
 #인덱스는 시간-1, 값은 각 시간에 녹은 치즈의 수

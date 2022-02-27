@@ -21,12 +21,8 @@ def dfs(result:list,count:int)->list:
         return
 
     for i in range(n):
-        # if index_check[i] == -1:
-        #     continue
         result[count] = num_list[i]
-        # index_check[i] = -1
         dfs(result,count+1)
-        # index_check[i] = 0
 
 #중복체크
 check_dic = dict()
