@@ -46,7 +46,7 @@ def bfs(start_node:tuple, graph:list) -> list:
                 if graph[next_h][next_w] == 1:
 
                     #방문처리
-                    graph [next_h][next_w] = 0
+                    graph [next_h][next_w] = 0  
                     #다음 탐색을 위해 추가
                     need_visited.append((next_h,next_w))
     
@@ -61,8 +61,6 @@ while True:
         break
     #지도
     graph = list()
-
-    
 
     for _ in range(h):
         #지도를 만듦

@@ -55,6 +55,8 @@ for i in range(n):
             home_count_list.append(bfs([i,j]))
             total_count += 1
 
+home_count_list.sort()
+
 print(total_count)
 
 for i in home_count_list:

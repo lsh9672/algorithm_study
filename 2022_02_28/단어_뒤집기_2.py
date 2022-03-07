@@ -33,5 +33,4 @@ for i in word:
             temp_word = ""
 
 result_word += temp_word
-print(temp_word)
 print(result_word)

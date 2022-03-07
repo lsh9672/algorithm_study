@@ -29,7 +29,7 @@ def bfs():
 
     visited[0][0] = 1
 
-    sword_value = 10001
+    sword_value = 10000001
 
     while need_visited:
         current_x,current_y = need_visited.popleft()
@@ -37,12 +37,12 @@ def bfs():
         #검을 구했으면 목적지까지 최단거리를 구함
         if graph[current_x][current_y] == 2:
             #검을 가지고 이동한 최단 거리.
-            sword_value = visited[current_x][current_y] + abs(n-1 - current_x) + abs(m-1 - current_y)
+            sword_value = visited[current_x][current_y] + abs(n-1 - current_x) + abs(m-1 - current_y)-1
 
         #목적지에 도달했으면, 검을 가지고 이동한 거리와 비교해본다.
         if current_x == n-1 and current_y == m-1:
 
-            return min(visited[n-1][m-1]-1,sword_value-1)
+            return min(visited[n-1][m-1]-1,sword_value)
 
         for i in range(4):
             next_x = current_x + dx[i]
