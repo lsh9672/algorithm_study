@@ -45,7 +45,7 @@ def bfs():
                 next_y = current_y + dy[i]
 
                 #게임판을 벗어나지 않고, 벽이 아니면 방문큐에 추가.+ 방문확인
-                if (0<=next_x<8) and (0<=next_y<8) and graph[next_x][next_y] == "."and visited[next_x][next_y] == 0:
+                if (0<=next_x<8) and (0<=next_y<8) and graph[next_x][next_y] == "." and visited[next_x][next_y] == 0:
                     visited[next_x][next_y] = 1
                     need_visited.append([next_x,next_y])
             
