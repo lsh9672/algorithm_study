@@ -5,7 +5,7 @@ import time
 
 def test_in_function1():
 
-    for i in range(10):
+    for i in range(100000):
         pass
 
 
@@ -17,7 +17,7 @@ end_time_in_function = time.time() - start_time_in_function
 
 
 start_time_in_global = time.time()
-for i in range(10):
+for i in range(100000):
         pass
 end_time_in_global = time.time() - start_time_in_global
 
