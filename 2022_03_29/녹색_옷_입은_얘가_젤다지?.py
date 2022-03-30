@@ -21,7 +21,7 @@ def search(n:int,graph:list)-> list:
     while priority_queue:
 
         current_distance, current_x, current_y = heapq.heappop(priority_queue)
-            
+
         
         #꺼낸거가 기존꺼보다 크면 패스
         if distances[current_x][current_y] < current_distance:
