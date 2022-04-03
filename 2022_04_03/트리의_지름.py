@@ -62,7 +62,7 @@ print(result)
 
 '''
 
-'''다른 풀이(시간 초과)
+'''다른 풀이(시간 초과) - 아래에서 방법1, 방법2로 나뉘는데, 방법2을 이용하면 해결가능
 #모든 노드를 구하는 것이 아닌, 리프노드에서의 거리만 구하면 시간을 좀더 줄일수 있을것 같다.
 #리프가 아닌 노드보다는 더 갈곳이 없는, 리프노드에서 하는것이 일반적으로 최대거리를 만들수 있기 때문에 리프노드에서 다익스라를 구한다.
 
@@ -114,51 +114,90 @@ def search(start_node:int)->int:
                 distances[next_node] = next_distance
                 heapq.heappush(priority_queue,[next_distance,next_node])
 
-    return max(distances)
+    return distances
 
 
 
 result = -1
 
-##이 부분에서 모든 노드에 대해서 다익스트라로 거리를 구하는 것이 아닌, 리프노들 구해서 리프노드로 하는것이 좋다.
+##방법 1(시간초과). 이 부분에서 모든 노드에 대해서 다익스트라로 거리를 구하는 것이 아닌, 리프노들 구해서 리프노드로 하는것이 좋다.
 #리프 노드의 경우, 자식노드의 갯수가 1개여야 한다(부모만 저장되어야 함.)
 #루트의 경우, 어쩔수 없이 탐색
-leaf_list = list()
-for i in range(1,n+1):
-    if len(graph[i]) == 1:
-        leaf_list.append(i)
 
-for i in leaf_list:
-    temp = search(i)
 
-    result = max(result, temp)
+##방법 2(통과). 루트로 부터 가장 먼 노드를 구함.
+# 가장 먼 노드로부터 가장 먼노드를 구함.
+temp = search(1)
+
+far_start_node = temp.index(max(temp))
+
+
+temp = search(far_start_node)
+
+result = max(temp)
 
 print(result)
 '''
 
 '''다른풀이 - 다익스트라 말고, dfs를 이용해서 탐색해보려고 한다.
-리프노드에서 부터 탐색함.
+리프노드에서 부터 탐색함. 
+다익스트라를 이용하지 않아도 됨 - 최단거리를 구하는 문제가 아니기 때문에
 '''
+
 import sys
+
+sys.setrecursionlimit(10**6)
 
 
 n = int(sys.stdin.readline())
 
-#도달할수 없는 값 정의
-INF = 1000001
 
-graph = {node:dict() for node in range(1,n+1)}
+#[[[1,14],[2,15]]]
+graph = [list() for node in range(n+1)]
 
 for _ in range(n-1):
     x,y,weight = map(int,sys.stdin.readline().split())
 
-    graph[x][y] = weight
-    graph[y][x] = weight
+    graph[x].append([y,weight])
+    graph[y].append([x,weight])
 
 #리프노드 구하기
-leaf_list = list()
+leaf_list = set()
 for i in range(1,n+1):
     if len(graph[i]) == 1:
-        leaf_list.append(i)
+        leaf_list.add(i)
 
-print(leaf_list)
+def dfs(start_node:int,current_wieght:int,distances:list):
+
+
+    for next_node, next_weight in graph[start_node]:
+        #-1이면 아직 방문안함
+        if distances[next_node] == -1:
+            distances[next_node] = next_weight + current_wieght
+            dfs(next_node,next_weight + current_wieght, distances)
+
+#0번째 인덱스는 안씀
+distances = [-1 for _ in range(n+1)]
+
+#자기자신은 0을 넣음
+distances[1] = 0
+
+#루트를 기준으로 가장 멀리갈수 있는 위치를 구함.(어떤노드던 상관없음)
+dfs(1,0,distances)
+
+#가장 멀리갈수 있는 노드를 추출
+
+far_start_node = distances.index(max(distances))
+
+#가장 멀리갈수 있는 노드에서 dfs해서 이 노드를 기준으로 가장 멀리가는 노드가 최대 길이가 됨.
+distances = [-1 for _ in range(n+1)]
+
+distances[far_start_node] = 0
+
+dfs(far_start_node,0,distances)
+
+print(max(distances))
+
+
+
+
