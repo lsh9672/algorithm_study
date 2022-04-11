@@ -59,5 +59,8 @@ if __name__=="__main__":
     n=4
     assert solution(n) == 2
 
+    n=1
+    assert solution(n) == 1
+
 
     
