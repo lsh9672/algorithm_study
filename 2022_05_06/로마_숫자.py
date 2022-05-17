@@ -2,7 +2,6 @@
 import sys
 
 
-
 first_roma = sys.stdin.readline().strip()
 
 second_roma = sys.stdin.readline().strip()

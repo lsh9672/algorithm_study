@@ -35,7 +35,7 @@ for _ in range(test_case):
             print(result[i], end = " ")
 '''
 
-'''힙을 이용한 빠른 풀이'''
+'''힙을 이용한 빠른 풀이 - 위의 sort()를 이용한 풀이보다 30배 빠름'''
 
 import sys
 import heapq

@@ -23,8 +23,7 @@ for x in range(e):
             for k in temp2:
                 people[k] = people[k]|people[i]
 
-print(people)
-
+# print(people)
 
 for i in people.keys():
     if len(people[i]) == target:
