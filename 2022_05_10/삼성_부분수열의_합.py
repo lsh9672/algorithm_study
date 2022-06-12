@@ -30,7 +30,7 @@
 
 
 import sys
-from itertools import combinations
+
 
 sys.stdin = open("/home/leesh/lsh/my_study/algorism_study/2022_05_10/sample_input (1).txt", "r")
 

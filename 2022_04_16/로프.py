@@ -13,6 +13,5 @@ num_list.sort()
 for i in range(n):
     num_list[i] = num_list[i] * (n-i)
 
-print(num_list)
 
 print(max(num_list))

@@ -1,6 +1,5 @@
 #백준 20437번
 
-
 import sys
 from collections import defaultdict
 
@@ -16,14 +15,14 @@ for _ in range(t):
         string_location[input_string[i]].append(i)
 
     
-    #저장된 것은 있는데, k가 1이라면, 그냥 1
+    ##저장된 것은 있는데, k가 1이라면, 그냥 1
     if k == 1:
         print(1,1)
         continue
     
-    #3번
+    ##3번
     min_result = 10001
-    #4번 
+    ##4번 
     max_result = 0
 
     for key in string_location.keys():
@@ -32,10 +31,10 @@ for _ in range(t):
             for i in range(len(temp_list) + 1 - k):
 
                 temp_cal = (temp_list[i+k-1] - temp_list[i]) + 1
-                #3번 업데이트
+                ##3번 업데이트
                 min_result = min(min_result,temp_cal)
 
-                #4번 업데이트
+                ##4번 업데이트
                 max_result = max(max_result,temp_cal)
 
     if min_result == 10001 or max_result == 0:

@@ -32,7 +32,5 @@ def back_tracking(index:int,sum_list:list):
     back_tracking(index+1,sum_list)
     
 
-
-
 back_tracking(0,list())
 print(result)

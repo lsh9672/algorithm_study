@@ -39,6 +39,7 @@ def bfs():
     
     visited[(0,0)] = 1
 
+
     while need_visited:
 
         current_x,current_y = need_visited.popleft()

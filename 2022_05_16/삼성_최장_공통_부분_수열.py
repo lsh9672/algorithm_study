@@ -23,8 +23,6 @@ for test_case in range(1, T + 1):
 
     result = dp[len(first_str)][len(second_str)]
 
-    for i in dp:
-        print(i)
 
     print(f"#{test_case} {result}")
     

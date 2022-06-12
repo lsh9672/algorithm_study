@@ -58,17 +58,22 @@ for i in range(1,n+1):
 
 temp = topology_sort(start_node,in_degree)
 
-print(in_degree)
-print(temp)
+## 남은 진입차수들이 전부 0이 아니면 순서를 나열할수 없음
+# check = True
+# for i in in_degree:
+#     if i != 0:
+#         check = False
+#         break
+# if check == True:
+#     for i in temp:
+#         print(i)
+# else:
+#     print(0)
 
-check = True
-for i in in_degree:
-    if i != 0:
-        check = False
-        break
-if check == True:
+## 진입차수가 아닌, 결과의 수가 n이 아니면 나열불가
+if len(temp) == n:
     for i in temp:
         print(i)
 else:
     print(0)
-        
+

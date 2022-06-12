@@ -108,7 +108,7 @@ for _ in range(m):
 
     ## 승객 태우러감
     go_to_passenger = bfs(start_node,field,[-1,-1])
-    print(f"go_to_passenger : {go_to_passenger}")
+    # print(f"go_to_passenger : {go_to_passenger}")
 
     if go_to_passenger == -1:
         fuel_num = -1
@@ -117,7 +117,7 @@ for _ in range(m):
         start_node = [go_to_passenger[0],go_to_passenger[1]]
     
     go_to_destination = bfs(start_node,field,passenger_start_end[go_to_passenger])
-    print(f"go_to_destination : {go_to_destination}")
+    # print(f"go_to_destination : {go_to_destination}")
 
     if go_to_destination == -1:
         fuel_num = -1

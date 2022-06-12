@@ -24,6 +24,7 @@ for _ in range(n):
         temp = list()
         for i in range(len(move_list)):
             temp.append((move_list[-i-1] + 1)%4)
+
         move_list.extend(temp)
 
     #방향에 맞춰서 드래곤커브, 좌표평면에 입력
@@ -41,7 +42,7 @@ for _ in range(n):
 #전부 1이면 사각형이므로 count+1
 count = 0
 for i in range(100):
-    for j in range(10):
+    for j in range(100):
         if field[i][j] == 1:
             if field[i+1][j] == field[i][j+1] == field[i+1][j+1] == 1:
                 count += 1

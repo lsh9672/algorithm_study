@@ -16,9 +16,11 @@ for _ in range(m):
 
     party_list.append(temp[1:])
 
+for _ in range(m):
     ##파티에 진실을 아는 사람이 있으면 나머지도 전부 진실을 알아야됨.
-    if true_people & set(temp[1:]):
-        true_people = true_people | set(temp[1:])
+    for i in party_list:
+        if true_people & set(i):
+            true_people = true_people | set(i)
 
 
 ## 진실을 아는 사람이 없으면 전부 과장되게 말해도됨

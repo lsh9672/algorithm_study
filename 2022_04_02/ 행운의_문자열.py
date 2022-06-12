@@ -1,6 +1,7 @@
 #백준 1342번 (문자열 연습) - 백트래킹을 이용해서 푸는 것이 좋음
 import sys
 
+
 s = sys.stdin.readline().strip()
 
 #a~z까지 문자의 개수를 저장할 리스트

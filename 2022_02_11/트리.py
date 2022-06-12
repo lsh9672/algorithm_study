@@ -92,8 +92,6 @@ parent_node_list = list(map(int,sys.stdin.readline().split()))
 remove_node = int(sys.stdin.readline())
 
 
-start_node = parent_node_list.index(-1)
-
 #돌면서 삭제할 노드들을 전부 -2로 바꿔준다.
 def dfs(remove_node,parent_node_list):
 

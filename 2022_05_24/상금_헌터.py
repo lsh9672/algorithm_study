@@ -14,16 +14,17 @@ for _ in range(n):
     total = 0
     a,b = map(int,sys.stdin.readline().split())
 
-    if a <= 21:
-        for i in range(1,len(first_list)-1):
+    if 0 < a <= 21:
+        
+        for i in range(1,len(first_list)):  
             if first_list[i] >= a:
                 total += first_dict[i]
                 break
 
 
-    if b <= 31:
-        for i in range(1,len(second_list)-1):
-            if second_list[i] >= a:
+    if 0 < b <= 31:
+        for i in range(1,len(second_list)):
+            if second_list[i] >= b:
                 total += second_dict[i]
                 break
     

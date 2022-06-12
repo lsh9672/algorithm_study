@@ -41,11 +41,11 @@ for _ in range(test_case):
 
     for i in range(1,n+1):
         if visited[i] == 0:
-
             dfs(i,list())
     
-    print(team_success)
 
     print(n - len(set(team_success)))
+
+    
     
 

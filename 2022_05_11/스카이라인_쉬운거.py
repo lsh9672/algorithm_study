@@ -1,5 +1,4 @@
 #1863번 (자료구조, 골드5)
-from distutils.command.build import build
 import sys
 
 n = int(sys.stdin.readline().strip())

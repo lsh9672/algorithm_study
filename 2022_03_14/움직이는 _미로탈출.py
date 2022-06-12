@@ -26,7 +26,6 @@ def bfs():
     while need_visited:
         #방문처리 - 매초마다 초기화해서 써야됨'
         visited = [[0 for _ in range(8)] for _ in range(8)]
-
         #1초간 들어있는 노드(위치)를 탐색하면서, 벽에 충돌하는지 확인.
         for _ in range(len(need_visited)):
             current_x,current_y = need_visited.popleft()

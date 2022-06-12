@@ -34,7 +34,6 @@ for i in temp_list:
         temp.append(i[0])
 
 temp.sort()
-print(temp)
 
 if len(temp) > 2:
     print(temp[1])

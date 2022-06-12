@@ -63,6 +63,6 @@ while True:
 
 for a,b in result:
     if b == 1:
-        print(f"<{a}> is acceptable")
+        print(f"<{a}> is acceptable.")
     else:
-        print(f"<{a}> is not acceptable")
+        print(f"<{a}> is not acceptable.")

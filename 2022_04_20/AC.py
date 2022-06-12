@@ -1,4 +1,6 @@
 #백준 5430번 (골드5, 자료구조)
+
+
 import sys
 from collections import deque
 
@@ -29,7 +31,6 @@ for _ in range(test_case):
         ##R이면 문자열 뒤집는 카운트
         if command == "R":
             reverse_count += 1
-            result_check = True
 
         ##D이면 두가지 경우를 확인해야됨
         elif command == "D":
@@ -48,7 +49,6 @@ for _ in range(test_case):
                     reverse_count = 0
                     
                     
-                result_check = True
     
     if result_check == False:
         print("error")
@@ -59,3 +59,5 @@ for _ in range(test_case):
             print("[" + ",".join(num_list).strip() + "]")
         else:
             print("[" + ",".join(num_list).strip() + "]")
+
+

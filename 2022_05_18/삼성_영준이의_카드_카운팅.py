@@ -31,11 +31,11 @@ for test_case in range(1, T + 1):
             card_info[card_type].add(card_num)
     
     if result == True:
-        print("ERROR")
+        print(f"#{test_case} ERROR")
 
     else:
-        for i in ["S","D","H","C"]:
-            result_list.append(13-len(card_info[i]))
+        for i in card_info.values():
+            result_list.append(13-len(i))
 
         print(f"#{test_case}", end=" ")
         print(*result_list)

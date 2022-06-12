@@ -11,11 +11,8 @@ index = 0
 
 while index <= (len(input_string) - len(search_string)):
 
-    
-
 
     if input_string[index] == search_string[0]:
-        print("tes")
         for i in range(len(search_string)):
             if input_string[index+i] != search_string[i]:
                 index += 1
@@ -26,7 +23,6 @@ while index <= (len(input_string) - len(search_string)):
     else:
         index+= 1
 
-    print(index)
-    
+
 
 print(result)

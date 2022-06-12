@@ -12,6 +12,7 @@ fireball_info_list = deque(list())
 #[[[질량,방향,속도],[질량,방향,속도]]]
 field = [[deque(list()) for _ in range(n)]for _ in range(n)]
 
+
 for _ in range(m):
     fireball_info_list.append(list(map(int,sys.stdin.readline().split())))
 

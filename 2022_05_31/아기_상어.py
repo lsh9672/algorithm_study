@@ -95,11 +95,6 @@ while True:
 
     temp = bfs(shark_location,field)
 
-    # for i in field:
-    #     print(i)
-
-    # print("-----------")
-
     if temp == -1:
         break
 

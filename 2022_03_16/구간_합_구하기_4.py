@@ -9,7 +9,6 @@ num_list = list(map(int,sys.stdin.readline().split()))
 for i in range(n-1):
     num_list[i+1] += num_list[i]
 
-print(num_list)
 result = list()
 for _ in range(m):
     a,b = map(int,sys.stdin.readline().split())
@@ -20,8 +19,6 @@ for _ in range(m):
         result.append(num_list[b])
     else:
         result.append(num_list[b] - num_list[a-1])
-        
-    # print(num_list[b-1] - num_list[a-2])
     
 
 for i in result:

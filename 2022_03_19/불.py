@@ -36,8 +36,7 @@ def fire_bfs(fire_start:list,fire_list:list)-> list:
                     fire_list[next_x][next_y] = current_count+1
                     need_visited.append([next_x,next_y,current_count+1])
 
-
-def bfs(start_node:list,fire_list) -> int:
+def bfs(start_node:list,fire_list:list) -> int:
 
     need_visited = deque(list())
     need_visited.append(start_node)

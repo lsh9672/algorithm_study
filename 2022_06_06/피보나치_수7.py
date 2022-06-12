@@ -3,7 +3,7 @@ import sys
 
 n = int(sys.stdin.readline().strip())
 
-dp = [0 for _ in range(1000000)]
+dp = [0 for _ in range(1000001)]
 
 dp[0] = 0
 dp[1] = 1

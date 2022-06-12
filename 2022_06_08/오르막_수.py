@@ -1,7 +1,7 @@
 #백준 11057번 (디피, 실버1)
 import sys
 
-n = int(sys.stdin.readline().split())
+n = int(sys.stdin.readline().strip())
 
 
 dp = [1 for _ in range(10)]

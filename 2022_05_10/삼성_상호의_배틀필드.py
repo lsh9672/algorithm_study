@@ -122,6 +122,6 @@ for test_case in range(1, T + 1):
                     break
         
     
-    print(f"{test_case} {''.join(field[0])}")
+    print(f"#{test_case} {''.join(field[0])}")
     for x in range(1,h):
         print("".join(field[x]))

@@ -2,7 +2,7 @@
 import sys
 
 
-sys.stdin = open("/home/leesh/lsh/my_study/algorism_study/2022_05_01/SampleInput.txt", "r")
+# sys.stdin = open("/home/leesh/lsh/my_study/algorism_study/2022_05_01/SampleInput.txt", "r")
 
 T = int(input())
 

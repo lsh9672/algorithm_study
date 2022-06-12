@@ -80,9 +80,4 @@ while True:
     if check == True:
         break
 
-
-    
-    
-
-
 print(result)

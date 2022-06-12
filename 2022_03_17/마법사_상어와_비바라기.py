@@ -1,6 +1,7 @@
 #백준 21610번 (마법사 상어와 비바라기, 시뮬레이션 골드5)
 import sys
 
+
 '''입력'''
 n,m = map(int,sys.stdin.readline().split())
 
@@ -50,6 +51,7 @@ def raining(cloud_location:list):
     for a,b in cloud_location:
         field[a][b] += 1
 
+
 #3번 동작 - 구름이 사라짐.
 #4번 동작 - 물이 증가된 위치에서 대각선으로 물의 거리가 1인 개수만큼 바구니의 물의 양이 늘어남.
 #cloud_location은 구름이 이동한 위치.
@@ -93,6 +95,7 @@ def new_cloud_location(cloud_location:list)->list:
 
 #이동
 move_list = list()
+
 for _ in range(m):
 
     dir,distance = map(int,sys.stdin.readline().split())

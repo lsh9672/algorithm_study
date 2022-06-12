@@ -75,6 +75,7 @@ for time,dir in snake_conversion_info:
         elif field[next_x][next_y] == -1:
             snake_location.appendleft([next_x,next_y])
             field_snake[next_x][next_y] = -1
+            field[next_x][next_y] = 0
 
         
         #사과가 아니라면, 뱀의 대가리 값을 방향쪽으로 증가시킨 값을 앞에 넣고 꼬리를 pop
@@ -84,6 +85,7 @@ for time,dir in snake_conversion_info:
 
             temp_x,temp_y = snake_location.pop()
             field_snake[temp_x][temp_y] = 0
+
 
     #방향전환 로직,
     #위의 시간동안 이동이 끝나면, 방향을 전환해야됨

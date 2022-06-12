@@ -1,6 +1,6 @@
 #백준 13023번 ABCDE
 import sys
-sys.setrecursionlimit=10**6
+sys.setrecursionlimit=10**5
 
 
 n,m = map(int,sys.stdin.readline().split())
@@ -17,7 +17,6 @@ visited = [0 for _ in range(n)]
 
 
 def dfs(start_node:int,count:int):
-    visited[start_node] =1
 
     if count == 5:
         print(1)
@@ -28,9 +27,12 @@ def dfs(start_node:int,count:int):
         if visited[node] == 0:
             visited[node] = 1
             dfs(node,count+1)
+            visited[node] = 0
 
 for i in range(n):
+    visited[i] = 1
     dfs(i,1)
+    visited[i] = 0
 
 print(0)   
 

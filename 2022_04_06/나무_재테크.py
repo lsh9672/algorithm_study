@@ -17,7 +17,7 @@ tree_nutrient_list = []
 dx = [0,0,-1,1,-1,1,-1,1]
 dy = [-1,1,0,0,1,-1,-1,1]
 
-
+#기계로 줄 양분
 for i in range(n):
     temp = list(map(int,sys.stdin.readline().split()))
     tree_nutrient_list.append(temp)
@@ -29,9 +29,7 @@ for i in range(m):
     tree_field[x-1][y-1].append(age)
 
 
-year = 0
-
-while year < k:
+for _ in range(k):
 
     #시간단축을 위해서 봄을 처리하면서 여름도 같이 처리함.
     #봄, 여름
@@ -85,21 +83,13 @@ while year < k:
                         if (0 <= next_x < n) and (0 <= next_y < n):
                             tree_field[next_x][next_y].appendleft(1)
 
+
             #겨울에는 로봇이 양분을 추가해줌.
             field[i][j] += tree_nutrient_list[i][j]
-
-
-    year += 1
 
 
 result = 0
 #다끝나면 반복문을 돌면서 나무의 개수를 센다.
 for i in range(n):
     for j in range(n):
-        temp = len(tree_field[i][j])
-        if temp != 0:
-            result += temp
-
-
-
-print(result)
+        result += len(tree_field[i][j])

@@ -47,6 +47,7 @@ def dfs(count:int,operation_value:int)-> None:
         ## 나눗셈
         if operator_list[3] > 0:
             operator_list[3] -= 1
+            ## 문제에 나와있는대로 나누기를 하고 몫만 취하려면 //가 아닌 /후에 정수로 형변환해서 소수점을 날리는 연산이 필요하다.
             dfs(count+1,int(operation_value / num_list[count]))
             operator_list[3] += 1
     return

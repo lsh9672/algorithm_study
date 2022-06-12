@@ -53,9 +53,10 @@ else:
                         
                         else:
                             temp[array_a[i][j]] = 1
-
+                
                 temp_list = list(temp.items())
                 temp_list = sorted(temp_list, key=lambda x: (x[1],x[0]))
+
 
                 temp_sort_list = list()
                 
@@ -67,7 +68,7 @@ else:
                 ##정렬된 결과를 다시 리스트에 넣음
                 array_a[i] = temp_sort_list
                 
-            ##각 과정이 끝나면, 가장 긴 열을 기준으로 이 보다 짧은 행은 0으로 채움
+            ##각 과정이 끝나면, 가장 긴 행을 기준으로 이 보다 짧은 행은 0으로 채움
             for x in range(len(array_a)):
                 ##최대 열의 길이보다 작으면 0을 그만큼 채워넣음
                 if len(array_a[x]) < temp_max:
@@ -84,8 +85,6 @@ else:
         if (0<= r-1 < len(array_a)) and (0<= c-1 < len(array_a[0])) and array_a[r-1][c-1] == k:
             result = time
             break
-        
-         
         
         '''C연산'''
         ##1. 행 < 열 인지 확인
@@ -119,6 +118,7 @@ else:
                 for temp_sort in temp_list:
                     temp_append_list += temp_sort
 
+                
                 temp_max = max(temp_max,len(temp_append_list))
 
                 

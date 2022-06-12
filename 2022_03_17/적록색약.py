@@ -1,5 +1,4 @@
 #백준 10026번 (그래프 탐색, 골드5)
-from re import A
 import sys
 from collections import deque
 

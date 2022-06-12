@@ -27,8 +27,6 @@ def bfs(start_node):
     count = 0
     while need_visited:
         current_x, current_y = need_visited.popleft()
-        print(current_x,current_y)
-
         for i in range(4):
             next_x = current_x + dx[i]
             next_y = current_y + dy[i]

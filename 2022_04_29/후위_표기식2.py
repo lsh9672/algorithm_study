@@ -43,5 +43,4 @@ for i in postfix_string:
 
     else:
         stack.append(i)
-print(stack)
 print(f"{stack[-1]:0.2f}")

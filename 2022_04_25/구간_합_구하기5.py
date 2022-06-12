@@ -66,10 +66,6 @@ total_result = list()
 for _ in range(m):
     x1,y1,x2,y2 = map(int,sys.stdin.readline().split())
 
-    print("------------")
-    for x in origin_graph:
-        print(x)
-
     result = 0 
 
     result = (origin_graph[x2][y2] - origin_graph[x2][y1-1]- origin_graph[x1-1][y2] + origin_graph[x1-1][y1-1])

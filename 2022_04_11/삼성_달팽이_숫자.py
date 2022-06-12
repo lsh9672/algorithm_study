@@ -2,8 +2,6 @@
 
 # n - (n-1) - (n-1) - (n-2) - (n-2) - (n-3) - (n-3) - (1) - (1)
 # 방향 : (0,1),(1,0),(0,-1),(-1,0)
-import sys
-sys.stdin = open("/home/leesh/lsh/my_study/algorism_study/2022_04_11/input.txt", "r")
 
 T = int(input())
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.

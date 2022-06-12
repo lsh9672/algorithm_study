@@ -41,6 +41,8 @@ for i in range(n):
 #3개의 벽을 세울 경우의 수
 three_wall_location = list(combinations(empty_space_list, 3))
 
+
+
 #주어진 격자형 그래프를 탐색할 bfs 함수 정의 - 2에서 출발하고, 0을 만나면 전부 2로 바꿔버림
 def bfs(start_node:list,graph:list) -> list:
 
@@ -93,6 +95,7 @@ for wall in three_wall_location:
     #완전히 복사
     # temp_graph = deepcopy(graph)
     temp_graph = list_copy(graph)
+
 
     #벽세우기
     for a,b in wall:

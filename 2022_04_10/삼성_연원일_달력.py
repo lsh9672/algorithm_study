@@ -1,6 +1,6 @@
 import sys
 
-sys.stdin = open("/home/leesh/lsh/my_study/algorism_study/2022_04_10/input.txt", "r")
+
 
 T = int(input())
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다

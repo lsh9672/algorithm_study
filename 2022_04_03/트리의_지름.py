@@ -162,10 +162,10 @@ for _ in range(n-1):
     graph[y].append([x,weight])
 
 #리프노드 구하기
-leaf_list = set()
-for i in range(1,n+1):
-    if len(graph[i]) == 1:
-        leaf_list.add(i)
+# leaf_list = set()
+# for i in range(1,n+1):
+#     if len(graph[i]) == 1:
+#         leaf_list.add(i)
 
 def dfs(start_node:int,current_wieght:int,distances:list):
 
@@ -186,6 +186,7 @@ distances[1] = 0
 dfs(1,0,distances)
 
 #가장 멀리갈수 있는 노드를 추출
+
 
 far_start_node = distances.index(max(distances))
 

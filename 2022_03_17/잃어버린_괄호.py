@@ -2,7 +2,6 @@
 import sys
 
 
-
 n = sys.stdin.readline().strip().split("-")
 
 result = 0

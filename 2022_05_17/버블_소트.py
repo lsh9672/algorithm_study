@@ -69,6 +69,7 @@ def merge(left_list:list,right_list:list)->list:
     
     return merge_result_list
 
-print(merge_split(num_list))
+# print(merge_split(num_list))
+merge_split(num_list)
 
 print(result)

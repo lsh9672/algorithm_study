@@ -1,4 +1,8 @@
 #백준 22868번 (그래프, 골드3)
+
+'''아이디어는 대략 생각났는데, 구현에서 막혀서 참고함.
+https://westmino.tistory.com/95?category=882388
+'''
 import sys
 from collections import deque
 
